@@ -1,11 +1,18 @@
-const express = require('express')
-const app = express()
-const port = 3000
+require("dotenv").config();
+const express = require("express");
+const app = express();  
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+//Defining API routes
+const apiRoutes = require("./routes/apiRoutes");
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+//Convert the req as json expression
+app.use(express.json());
+// mongodb connection
+const connectDB = require("./config/db");
+connectDB();
+
+app.use("/api", apiRoutes);
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
