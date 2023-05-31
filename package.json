@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "npx nodemon index.js",
+    "start": "node index.js",
     "seed:data": "node seeder/seeder"
   },
   "author": "",
