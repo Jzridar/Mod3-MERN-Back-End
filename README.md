@@ -4,7 +4,7 @@
 
 [Frontend GIT Link](https://github.com/Jzridar/Mod3-React-Front-End)
 
-[Backend LIVE Link](https://coin-ranking-jzridar.onrender.com)
+[Backend LIVE Link](https://product-api-252u.onrender.com/)
 
 [Frontend LIVE Link](https://coin-ranking-jzridar.onrender.com)
 

@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
-const app = express();  
+const cors = require('cors')
+const app = express();
 
 //Defining API routes
 const apiRoutes = require("./routes/apiRoutes");
@@ -11,6 +12,7 @@ app.use(express.json());
 const connectDB = require("./config/db");
 connectDB();
 
+app.use(cors({ origin: '*' })) // used to whitelist requests
 app.use("/api", apiRoutes);
 
 const PORT = process.env.PORT || 5000;
